@@ -1,0 +1,39 @@
+<%- include('layout/adminHeader')%>
+
+    <div class=" center-div" id="login">
+        <div class="container w-25 border py-4 my-5 addORedit rounded">
+            <div class="text-center title pb-5 bg-success rounded text-white">
+                <h2 class="font-weight-bold">Edit user<br>(<%= user.name %>)</h2>
+                <div class="form-group mb-3 text-warning">
+                    <% if(locals.message){ %>
+                        <span>
+                        <%= locals.message %>
+                    </span>
+                   <% }%>
+                </div>
+            </div>
+            
+            <form action="/admin/edit/<%= user._id %>"  method="post" id="add-form" >
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name='name' value="<%= user.name %>" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name='email' value="<%= user.email %>" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">password</label>
+                    <input type="password" class="form-control"  name='password' value="<%= user.password %>" aria-describedby="emailHelp">
+                </div>
+
+
+                
+                <button type="submit" name="submit" class="btn btn-success">update</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('layout/adminFooter')%>

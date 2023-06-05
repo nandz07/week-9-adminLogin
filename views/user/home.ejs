@@ -1,0 +1,53 @@
+<%-include('layout/header')-%>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Nand`z Bake</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">cart</a>
+          </li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <%= locals.user ? user :'Login System' %>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <section>
+    <div class="container mt-3">
+        <div class="row">
+            <%// for(var i = 0; i < products.length; i++) {%>
+            <div class="col-md-3">
+                <div class="card" style="width: 15rem;">
+                    <img src="<%= //products[i].img %>"
+                        class="card-img-top" alt="..." style="height: 12rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= //products[i].name %></h5>
+                        <p class="card-text"><%=// products[i].price %></p>
+                        <a href="#" class="btn btn-primary"><%= //products[i].catagory %></a>
+                    </div>
+                </div>
+            </div>
+            <% //} %>
+        </div>
+    </div>
+</section> -->
+
+<%-include('layout/footer')-%>

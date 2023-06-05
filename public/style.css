@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    color: #d9edf7;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('/assets/slider-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.center-div{
+    padding-top: 10%;
+}
+.btn.btn-success{
+    padding: .4em 2em;
+}
+form{
+    padding: 0 3em;
+}
+.container{
+    background: rgba(0, 0, 0, 0.452);
+    border-radius: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

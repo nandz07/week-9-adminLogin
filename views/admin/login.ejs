@@ -1,0 +1,28 @@
+<%-include('layout/header')-%> 
+<div class="text-center center-div col-lg-12" id="login">
+    <div class="container w-25 border login">
+        <div class="title pb-3 mt-3">
+            <h2 class="font-weight-bold">Login system</h2>
+            <span>Login for existing user</span>
+            <div class="form-group mb-3">
+                <% if(locals.message){ %>
+                    <span>
+                    <%= locals.message %>
+                </span>
+               <% }%>
+            </div>
+        </div>
+        <form action="/admin/login" method="POST" class="pt-3">
+            <div class="form-group mb-3">
+                <input type="email" class="form-control" name="email" placeholder="email">
+            </div>
+            <div class="form-group mb-3">
+                <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+           
+            <button type="submit" class="btn btn-success rounded-pill mb-3">Login</button>
+        </form>
+    </div>
+</div>
+
+<%-include('layout/footer')-%>
